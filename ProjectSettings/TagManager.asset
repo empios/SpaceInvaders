@@ -8,6 +8,9 @@ TagManager:
   - Base
   - Enemy
   - Button
+  - LoadText
+  - input
+  - Save
   layers:
   - Default
   - TransparentFX

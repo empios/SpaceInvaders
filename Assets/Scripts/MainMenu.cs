@@ -8,11 +8,19 @@ public class MainMenu : MonoBehaviour
 
     public void PlayGame()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene("Scene_001");
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Nickname");
     }
 
+    public void ShowHighScore()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene("HighScore");
+    }
     public void QuitGame()
     {
         Application.Quit();
+    }
+    public void BackToMainMenu() 
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Menu");
     }
 }
