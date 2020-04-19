@@ -14,4 +14,11 @@ public class RestartLevel : MonoBehaviour
         Time.timeScale = 1;
         UnityEngine.SceneManagement.SceneManager.LoadScene("Scene_001");
     }
+    public void RestartAdventure()
+    {
+        PlayerScore.playerScore = 0;
+        GameOver.isPlayerDead = false;
+        Time.timeScale = 1;
+        UnityEngine.SceneManagement.SceneManager.LoadScene("AdventureMode");
+    }
 }

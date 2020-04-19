@@ -24,14 +24,14 @@ public class EnemyBulletController : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-     if(collision.tag == "Player")
+     if(collision.CompareTag("Player"))
         {
             Destroy(collision.gameObject);
             Destroy(gameObject);
             GameOver.isPlayerDead = true;
         }   
 
-     else if (collision.tag == "Base")
+     else if (collision.CompareTag("Base"))
         {
             GameObject playerBase = collision.gameObject;
             BaseHealth baseHealth = playerBase.GetComponent<BaseHealth>();

@@ -31,7 +31,7 @@ public class JsonController : MonoBehaviour
 
             {
 
-                Debug.Log(webRequest.error);
+                scoreText.text = "There is error with network.";
             }
 
             else

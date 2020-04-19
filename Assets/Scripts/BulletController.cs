@@ -29,13 +29,13 @@ public class BulletController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.tag == "Enemy")
+        if(collision.CompareTag("Enemy"))
         {
             Destroy(collision.gameObject);
             Destroy(gameObject);
             PlayerScore.playerScore += 5;
         }
-        else if(collision.tag == "Base")
+        else if(collision.CompareTag("Base"))
         {
             Destroy(gameObject);
         }

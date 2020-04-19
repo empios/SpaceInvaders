@@ -39,7 +39,7 @@ public class EnemyController : MonoBehaviour
             }
 
 
-            if (enemy.position.y <= -4)
+            if (enemy.position.y <= -3)
             {
                 GameOver.isPlayerDead = true;
                 Time.timeScale = 0;

@@ -12,7 +12,7 @@ public class NickNameController : MonoBehaviour
     public void saveToVariable()
     {
         nickName = inputField.text;
-        UnityEngine.SceneManagement.SceneManager.LoadScene("Scene_001");
+        UnityEngine.SceneManagement.SceneManager.LoadScene("AdventureMode");
     }
 
 }
