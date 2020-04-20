@@ -11,6 +11,7 @@ TagManager:
   - LoadText
   - input
   - Save
+  - GameOver
   layers:
   - Default
   - TransparentFX

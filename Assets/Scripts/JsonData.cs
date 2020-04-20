@@ -4,15 +4,15 @@ using System.Collections.Generic;
 [Serializable]
 public class JsonData
 {
-    public List<ScoreList> scores;
+    public bool success;
+    public List<ScoreList> data;
 }
 
 [Serializable]
 public class ScoreList
 {
-    public int id;
-    public string nickname;
+    public string _id;
+    public string username;
     public int score;
-    public DateTime created_at;
-    public DateTime updated_at;
+    public int __v;
 }

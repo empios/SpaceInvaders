@@ -183,7 +183,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4bd9e42aaa80c549b149e997d3721b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jsonUrl: http://localhost:1337/scores
+  jsonUrl: https://lazy-game-devs.now.sh/api/games/spaceinvaders/score
   scoreText: {fileID: 417991329}
 --- !u!1 &417991327
 GameObject:

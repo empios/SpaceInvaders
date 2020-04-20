@@ -17,12 +17,12 @@ public class BaseGenerator : MonoBehaviour
 
     void spawnBase()
     {
-
-        GameObject spawned = Instantiate(basePrefab, baseHolder.position, baseHolder.rotation);
-        spawned.transform.SetParent(gameObject.transform);
-        float x = baseHolder.transform.position.x + Random.Range(-7, 7);
-        float y = baseHolder.transform.position.y + Random.Range(-1, 1);
+        float x = Random.Range(-7, 7);
+        float y = Random.Range(-3,-2);
         float z = baseHolder.transform.position.z;
         newPosition.Set(x, y, z);
+        GameObject spawned = Instantiate(basePrefab, newPosition, baseHolder.rotation);
+        spawned.transform.SetParent(gameObject.transform);
+       
     }
 }

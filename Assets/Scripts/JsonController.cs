@@ -8,14 +8,15 @@ using UnityEngine.UI;
 
 public class JsonController : MonoBehaviour
 {
-    public string jsonUrl = "http://localhost:1337/scores";
+    public string jsonUrl = "https://lazy-game-devs.now.sh/api/games/spaceinvaders/score";
     public Text scoreText;
-    public WWWForm form = new WWWForm();
+    public WWWForm form;
 
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(getData());
+        form = new WWWForm();
+    StartCoroutine(getData());
     }
 
 
@@ -37,7 +38,8 @@ public class JsonController : MonoBehaviour
             else
 
             {
-                string JSONToParse = "{\"scores\":" + webRequest.downloadHandler.text + "}";
+                string JSONToParse = webRequest.downloadHandler.text;
+                
                 processJsonData(JSONToParse);
             }
 
@@ -48,20 +50,20 @@ public class JsonController : MonoBehaviour
 
     public void formData(string nickName, int score)
     {
-        form.AddField("nickname", nickName);
+        form.AddField("username", nickName);
         form.AddField("score", score);
     }
 
     private void processJsonData(string url)
     {
         JsonData jsonData = JsonUtility.FromJson<JsonData>(url);
-        jsonData.scores.OrderByDescending(scoreList => scoreList.score);
+        jsonData.data.OrderByDescending(scoreList => scoreList.score);
         int counter = 1;
-        foreach(ScoreList x in jsonData.scores)
+        foreach(ScoreList x in jsonData.data)
         {
             if (counter <= 10)
             {
-                scoreText.text = scoreText.text + x.nickname + " " + x.score.ToString() + "\n";
+                scoreText.text = scoreText.text + x.username + " " + x.score.ToString() + "\n";
                 counter++;
             }
 

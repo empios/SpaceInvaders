@@ -8,12 +8,12 @@ public class GameOver : MonoBehaviour
 {
     public static bool isPlayerDead = false;
     private Text gameOver;
+    public static bool offRequest = false;
     // Start is called before the first frame update
     void Start()
     {
         gameOver = GetComponent<Text>();
         gameOver.enabled = false;
-        StartCoroutine(sendRequest());
     }
 
     // Update is called once per frame
@@ -22,16 +22,21 @@ public class GameOver : MonoBehaviour
         if (isPlayerDead)
         {
             Time.timeScale = 0;
+            if (!offRequest)
+            {
+                StartCoroutine(sendRequest());
+                offRequest = true;
+            }
             gameOver.enabled = true;
-            
         }
     }
     IEnumerator sendRequest()
     {
         WWWForm form = new WWWForm();
-        form.AddField("nickname", NickNameController.nickName);
-        form.AddField("score", (int)PlayerScore.playerScore);
-        UnityWebRequest webRequest = UnityWebRequest.Post("http://localhost:1337/scores", form);
+        form.AddField("username", NickNameController.nickName);
+        form.AddField("score", PlayerScore.playerScore);
+        Debug.Log(PlayerScore.playerScore);
+        UnityWebRequest webRequest = UnityWebRequest.Post("https://lazy-game-devs.now.sh/api/games/spaceinvaders/score", form);
         yield return webRequest.SendWebRequest();
     }
 }

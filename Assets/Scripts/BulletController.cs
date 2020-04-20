@@ -33,7 +33,7 @@ public class BulletController : MonoBehaviour
         {
             Destroy(collision.gameObject);
             Destroy(gameObject);
-            PlayerScore.playerScore += 5;
+            PlayerScore.playerScore = PlayerScore.playerScore +  5;
         }
         else if(collision.CompareTag("Base"))
         {

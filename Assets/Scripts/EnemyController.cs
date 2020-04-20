@@ -22,11 +22,10 @@ public class EnemyController : MonoBehaviour
     }
     void MoveEnemy()
     {
-        enemyHolder.position += Vector3.right * speed;
 
         foreach(Transform enemy in enemyHolder)
         {
-            if(enemy.position.x<-9 || enemy.position.x> 9)
+            if(enemy.position.x<-7 || enemy.position.x> 7)
             {
                 speed = -speed;
                 enemyHolder.position += Vector3.down * 0.5f;
