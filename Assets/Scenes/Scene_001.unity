@@ -927,6 +927,7 @@ GameObject:
   - component: {fileID: 922323020}
   - component: {fileID: 922323019}
   - component: {fileID: 922323018}
+  - component: {fileID: 922323022}
   m_Layer: 0
   m_Name: EnemySprite (1)
   m_TagString: Enemy
@@ -1066,6 +1067,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &922323022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 922323016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b7b79f93c23fe6449fb172ffdaeea9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy: {fileID: 922323016}
+  speed: 0.1
+  isMovingRight: 0
 --- !u!1 &969273767
 GameObject:
   m_ObjectHideFlags: 0
@@ -2025,6 +2041,7 @@ GameObject:
   - component: {fileID: 1546486585}
   - component: {fileID: 1546486584}
   - component: {fileID: 1546486583}
+  - component: {fileID: 1546486587}
   m_Layer: 0
   m_Name: EnemySprite
   m_TagString: Enemy
@@ -2164,6 +2181,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1546486587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1546486581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b7b79f93c23fe6449fb172ffdaeea9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy: {fileID: 1546486581}
+  speed: 0.1
+  isMovingRight: 0
 --- !u!1 &2046832812
 GameObject:
   m_ObjectHideFlags: 0
@@ -2255,6 +2287,7 @@ GameObject:
   - component: {fileID: 2058921948}
   - component: {fileID: 2058921947}
   - component: {fileID: 2058921946}
+  - component: {fileID: 2058921950}
   m_Layer: 0
   m_Name: EnemySprite (3)
   m_TagString: Enemy
@@ -2394,6 +2427,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &2058921950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2058921944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b7b79f93c23fe6449fb172ffdaeea9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy: {fileID: 2058921944}
+  speed: 0.1
+  isMovingRight: 0
 --- !u!1 &2059833904
 GameObject:
   m_ObjectHideFlags: 0
@@ -2407,6 +2455,7 @@ GameObject:
   - component: {fileID: 2059833908}
   - component: {fileID: 2059833907}
   - component: {fileID: 2059833906}
+  - component: {fileID: 2059833910}
   m_Layer: 0
   m_Name: EnemySprite (2)
   m_TagString: Enemy
@@ -2546,3 +2595,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &2059833910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2059833904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b7b79f93c23fe6449fb172ffdaeea9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy: {fileID: 2059833904}
+  speed: 0.1
+  isMovingRight: 0

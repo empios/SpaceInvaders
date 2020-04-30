@@ -57,9 +57,9 @@ public class JsonController : MonoBehaviour
     private void processJsonData(string url)
     {
         JsonData jsonData = JsonUtility.FromJson<JsonData>(url);
-        jsonData.data.OrderByDescending(scoreList => scoreList.score);
+        var newList = jsonData.data.OrderByDescending(x => x.score).ToList();
         int counter = 1;
-        foreach(ScoreList x in jsonData.data)
+        foreach(ScoreList x in newList)
         {
             if (counter <= 10)
             {
