@@ -736,10 +736,10 @@ PlayerSettings:
     m_VersionCode: 1
     m_VersionName: 
   apiCompatibilityLevel: 6
-  cloudProjectId: 3c32869d-f681-411c-b15f-19b6677985dd
+  cloudProjectId: 0582f2f8-3f27-4e51-800a-42372f5d3629
   framebufferDepthMemorylessMode: 0
-  projectName: SpaceInvaders
-  organizationId: mgrabiec
+  projectName: SpaceInvaders (1)
+  organizationId: shinigamipl123
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0
