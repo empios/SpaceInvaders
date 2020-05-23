@@ -168,7 +168,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 69191586}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3259afeed30f3734e90acb8443ce1ff1, type: 3}
+  m_Script: {fileID: 11500000, guid: e7e3784d9ed485a4ea7463ddbd62ed4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &79309110
@@ -254,8 +254,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 69191588}
-        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
-        m_MethodName: Adventure
+        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
+        m_MethodName: adventure
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -864,8 +864,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 69191588}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: PlayGame
+        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
+        m_MethodName: playGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1073,8 +1073,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 69191588}
-        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
-        m_MethodName: ShowHighScore
+        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
+        m_MethodName: loadHighScore
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1282,8 +1282,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 69191588}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: QuitGame
+        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
+        m_MethodName: quitGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

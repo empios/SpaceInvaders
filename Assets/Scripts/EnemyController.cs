@@ -17,39 +17,25 @@ public class EnemyController : MonoBehaviour
     void Start()
     {
         winText.enabled = false;
-        InvokeRepeating("MoveEnemy", 0.1f, 0.3f);
+        InvokeRepeating("changeSpeed", 0.1f, 0.3f);
         enemyHolder = GetComponent<Transform>();
     }
-    void MoveEnemy()
+    void changeSpeed()
     {
-
+        this.speed += 0.002f;
         foreach(Transform enemy in enemyHolder)
         {
-            if(enemy.position.x<-7 || enemy.position.x> 7)
-            {
-                speed = -speed;
-                enemyHolder.position += Vector3.down * 0.5f;
-                return;
-            }
-
             if (Random.value > fireRate)
             {
                 Instantiate(shot, enemy.position, enemy.rotation);
             }
-
-
-            if (enemy.position.y <= -3)
-            {
-                GameOver.isPlayerDead = true;
-                Time.timeScale = 0;
-
-            }
+            enemy.GetComponent<ChangeVector>().setSpeed(this.speed);
         }
 
         if(enemyHolder.childCount == 1)
         {
             CancelInvoke();
-            InvokeRepeating("MoveEnemy", 0.1f, 0.25f);
+            InvokeRepeating("changeSpeed", 0.1f, 0.25f);
         }
 
         if(enemyHolder.childCount == 0)
