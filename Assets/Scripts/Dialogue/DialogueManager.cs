@@ -10,12 +10,8 @@ public class DialogueManager : MonoBehaviour
     public Text sentenceText;
     public GameObject conversationPanel;
 
-    private Queue<string> dialogues;
-    // Start is called before the first frame update
-    void Start()
-    {
-        dialogues = new Queue<string>();
-    }
+    private Queue<string> dialoguesQueue;
+
 
     public void StartDialogue(Dialogue dialogue)
     {
@@ -25,18 +21,19 @@ public class DialogueManager : MonoBehaviour
 
         nameText.text = dialogue.name;
 
-        dialogues.Clear();
+        dialoguesQueue = new Queue<string>();
+        dialoguesQueue.Clear();
 
         foreach (string sentence in dialogue.sentences)
         {
-            dialogues.Enqueue(sentence);
+            dialoguesQueue.Enqueue(sentence);
         }
         DisplayNextSentence();
     }
 
     public void DisplayNextSentence()
     {
-        if(dialogues.Count == 0)
+        if(dialoguesQueue.Count == 0)
         {
             EndDialogue();
             conversationPanel.SetActive(false);
@@ -44,7 +41,7 @@ public class DialogueManager : MonoBehaviour
             return;
         }
 
-        string sentence = dialogues.Dequeue();
+        string sentence = dialoguesQueue.Dequeue();
         StopAllCoroutines();
         StartCoroutine(TypeSentence(sentence));
     }
