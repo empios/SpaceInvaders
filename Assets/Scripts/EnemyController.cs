@@ -41,6 +41,8 @@ public class EnemyController : MonoBehaviour
         if(enemyHolder.childCount == 0)
         {
             winText.enabled = true;
+            SceneLoader sceneLoader = new SceneLoader();
+            sceneLoader.loadNextScene();
         }
     }
 }
