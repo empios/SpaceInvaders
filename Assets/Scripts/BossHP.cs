@@ -6,13 +6,14 @@ using UnityEngine;
 public class BossHP : MonoBehaviour
 {
 
-    public static int Hp = 5;
+    public static int Hp;
 
     public static GameObject boss;
 
     public void Start()
     {
         boss = GameObject.FindGameObjectWithTag("Boss");
+        Hp = 30;
     }
 
     public static void ChangeHp()
