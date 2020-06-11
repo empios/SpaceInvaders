@@ -12,6 +12,7 @@ TagManager:
   - input
   - Save
   - GameOver
+  - Boss
   layers:
   - Default
   - TransparentFX

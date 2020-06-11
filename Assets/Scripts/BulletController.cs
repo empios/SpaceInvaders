@@ -35,5 +35,10 @@ public class BulletController : MonoBehaviour
             Destroy(gameObject);
             PlayerScore.playerScore = PlayerScore.playerScore +  5;
         }
+        if (collision.CompareTag("Boss"))
+        {
+            Destroy(gameObject);
+            BossHP.ChangeHp();
+        }
     }
 }

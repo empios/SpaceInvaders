@@ -20,9 +20,11 @@ public class DragFingerMove : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
+
     // Update is called once per frame
     private void Update()
     {
+
         if (Input.touchCount > 0)
         {
             Touch touch = Input.GetTouch(0);

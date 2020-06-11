@@ -8,7 +8,7 @@ public class ChangeVector : MonoBehaviour
     public float speed;
     public bool isMovingRight;
     public float border;
-
+    public float yChange;
     // Update is called once per frame
     void FixedUpdate()
     {
@@ -19,14 +19,14 @@ public class ChangeVector : MonoBehaviour
         //right 
         if (isMovingRight)
         {
-            Vector3 newPosition = new Vector3(enemy.transform.position.x + speed, enemy.transform.position.y, enemy.transform.position.z);
+            Vector3 newPosition = new Vector3(enemy.transform.position.x + speed, enemy.transform.position.y-yChange, enemy.transform.position.z);
             enemy.transform.position = newPosition;
         }
         //change vector
         //left
         else if(!isMovingRight)
         {
-            Vector3 newPosition = new Vector3(enemy.transform.position.x - speed, enemy.transform.position.y-0.025f, enemy.transform.position.z);
+            Vector3 newPosition = new Vector3(enemy.transform.position.x - speed, enemy.transform.position.y-yChange, enemy.transform.position.z);
             enemy.transform.position = newPosition;
         }
         if (enemy.transform.position.y <= -3)

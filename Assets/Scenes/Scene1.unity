@@ -1584,6 +1584,7 @@ MonoBehaviour:
   speed: 0.1
   isMovingRight: 0
   border: 2.5
+  yChange: 0.025
 --- !u!1 &969273767
 GameObject:
   m_ObjectHideFlags: 0
@@ -2960,6 +2961,7 @@ MonoBehaviour:
   speed: 0.1
   isMovingRight: 0
   border: 2.5
+  yChange: 0.025
 --- !u!1 &2042667493
 GameObject:
   m_ObjectHideFlags: 0
@@ -3285,6 +3287,7 @@ MonoBehaviour:
   speed: 0.1
   isMovingRight: 0
   border: 2.5
+  yChange: 0.025
 --- !u!1 &2059833904
 GameObject:
   m_ObjectHideFlags: 0
@@ -3454,3 +3457,4 @@ MonoBehaviour:
   speed: 0.1
   isMovingRight: 0
   border: 2.5
+  yChange: 0.025

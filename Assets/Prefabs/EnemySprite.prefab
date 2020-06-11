@@ -169,3 +169,4 @@ MonoBehaviour:
   speed: 0.1
   isMovingRight: 0
   border: 2.5
+  yChange: 0.025

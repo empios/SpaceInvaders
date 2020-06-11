@@ -21,6 +21,8 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+
+         
         float h = Input.GetAxis("Horizontal");
 
         if(spaceShip.position.x < minBound && h < 0)
@@ -34,6 +36,7 @@ public class PlayerController : MonoBehaviour
 
         spaceShip.position += Vector3.right * h * speed;
         
+
     }
 
     void Update()

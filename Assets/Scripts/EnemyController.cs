@@ -22,12 +22,13 @@ public class EnemyController : MonoBehaviour
     }
     void changeSpeed()
     {
-        this.speed += 0.002f;
+        this.speed += 0.001f;
         foreach(Transform enemy in enemyHolder)
         {
             if (Random.value > fireRate)
             {
                 Instantiate(shot, enemy.position, enemy.rotation);
+
             }
             enemy.GetComponent<ChangeVector>().setSpeed(this.speed);
         }
