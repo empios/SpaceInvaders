@@ -8,12 +8,13 @@ public class GameOver : MonoBehaviour
 {
     public static bool isPlayerDead = false;
     private Text gameOver;
+    public GameObject buttonMenu;
     public static bool offRequest = false;
     // Start is called before the first frame update
     void Start()
     {
         gameOver = GetComponent<Text>();
-        gameOver.enabled = false;
+        if (gameOver !=null) gameOver.enabled = false;
     }
 
     // Update is called once per frame
@@ -27,7 +28,8 @@ public class GameOver : MonoBehaviour
                 StartCoroutine(sendRequest());
                 offRequest = true;
             }
-            gameOver.enabled = true;
+            if (gameOver != null) gameOver.enabled = true;
+            buttonMenu.SetActive(true);
         }
     }
     IEnumerator sendRequest()

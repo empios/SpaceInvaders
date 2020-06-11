@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -7,11 +8,15 @@ public class SceneLoader : MonoBehaviour
 {
     public void adventure()
     {
-       SceneManager.LoadScene("Nickname");
+        PlayerScore.playerScore = 0;
+        GameOver.isPlayerDead = false;
+        SceneManager.LoadScene("Nickname");
     }
     public void playGame()
     {
-       SceneManager.LoadScene("Scene_001");
+        PlayerScore.playerScore = 0;
+        GameOver.isPlayerDead = false;
+        SceneManager.LoadScene("Scene1");
     }
 
     public void loadHighScore()

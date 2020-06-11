@@ -7,13 +7,14 @@ public class ChangeVector : MonoBehaviour
     public GameObject enemy;
     public float speed;
     public bool isMovingRight;
+    public float border;
 
     // Update is called once per frame
     void FixedUpdate()
     {
         //check is enemy in bounds
-        if (enemy.transform.position.x > 9 && isMovingRight) isMovingRight = false;
-        else if (enemy.transform.position.x < -9 && !isMovingRight) isMovingRight = true;
+        if (enemy.transform.position.x > border && isMovingRight) isMovingRight = false;
+        else if (enemy.transform.position.x < -border && !isMovingRight) isMovingRight = true;
 
         //right 
         if (isMovingRight)

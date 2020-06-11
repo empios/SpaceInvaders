@@ -6,26 +6,27 @@ public class EnemyGenerator : MonoBehaviour
 {
     private Transform enemyHolder;
     public GameObject enemy;
+    public bool isCampaign;
+    public float border;
     private Vector3 newPosition;
-    private float freqeencyOfSpawn;
     private int enemyCounter;
     // Start is called before the first frame update
     void Start()
     {
         enemyCounter = 0;
         enemyHolder = GetComponent<Transform>();
-        float x = Random.Range(-9, 9);
-        float y =2;
+        float x = Random.Range(-border, border);
+        float y =3;
         float z = enemyHolder.transform.position.z;
         newPosition.Set(x, y, z);
-        InvokeRepeating("spawnEnemy", 1f, 1f);
+        if(!isCampaign) InvokeRepeating("spawnEnemy", 1f, 1f);
         
     }
 
     void spawnEnemy()
     {
-        float x = Random.Range(-9,9);
-        float y = 6;
+        float x = Random.Range(-border, border);
+        float y = 3;
         float z = enemyHolder.transform.position.z;
         newPosition.Set(x, y, z);
         GameObject spawned = Instantiate(enemy, newPosition, enemyHolder.rotation);
