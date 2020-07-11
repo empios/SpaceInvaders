@@ -1,6 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class EnemyController : MonoBehaviour
@@ -8,8 +7,8 @@ public class EnemyController : MonoBehaviour
 
     private Transform enemyHolder;
     public float speed;
-
     public GameObject shot;
+    public GameObject menuButton;
     public Text winText;
     public float fireRate = 0.997f;
 
@@ -39,11 +38,18 @@ public class EnemyController : MonoBehaviour
             InvokeRepeating("changeSpeed", 0.1f, 0.25f);
         }
 
+        //win level
         if(enemyHolder.childCount == 0)
         {
-            winText.enabled = true;
-            SceneLoader sceneLoader = new SceneLoader();
-            sceneLoader.loadNextScene();
+            //check is current level from story mode
+            if (SceneManager.GetActiveScene().buildIndex > 3)
+            {
+                if (menuButton) menuButton.SetActive(true);
+                Time.timeScale = 0;
+                winText.enabled = true;
+                SceneLoader sceneLoader = new SceneLoader();
+                sceneLoader.loadNextScene();
+            }
         }
     }
 }

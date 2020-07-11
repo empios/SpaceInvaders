@@ -37,7 +37,6 @@ public class GameOver : MonoBehaviour
         WWWForm form = new WWWForm();
         form.AddField("username", NickNameController.nickName);
         form.AddField("score", PlayerScore.playerScore);
-        Debug.Log(PlayerScore.playerScore);
         UnityWebRequest webRequest = UnityWebRequest.Post("https://lazy-game-devs.now.sh/api/games/spaceinvaders/score", form);
         yield return webRequest.SendWebRequest();
     }

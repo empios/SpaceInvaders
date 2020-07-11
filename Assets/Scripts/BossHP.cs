@@ -18,11 +18,9 @@ public class BossHP : MonoBehaviour
 
     public static void ChangeHp()
     {
-        Debug.Log(Hp);
         if (--Hp <= 0) 
         {
             Destroy(boss);
-            
         }
     }
 }

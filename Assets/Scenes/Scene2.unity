@@ -349,6 +349,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.1
+  buttonMenu: {fileID: 390620559}
   shot: {fileID: 7969634220764316460, guid: 07eb714557b13594c825e9eea078f8a9, type: 3}
   winText: {fileID: 2046832814}
   fireRate: 0.9
