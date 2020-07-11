@@ -35,7 +35,9 @@ public class SceneLoader : MonoBehaviour
 
     public void loadNextScene()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        //check is current level from story mode
+        if(SceneManager.GetActiveScene().buildIndex > 3)
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
 }

@@ -17,10 +17,7 @@ public class NickNameController : MonoBehaviour
     {
         nickName = login.text;
         pass = password.text;
-        StartCoroutine(sendRequest());
-        if (isLogged) UnityEngine.SceneManagement.SceneManager.LoadScene("AdventureMode");
-        else text.text = "Login failed";
-        Debug.Log(isLogged);
+        StartCoroutine(sendRequest());        
     }
 
     IEnumerator sendRequest()
@@ -44,16 +41,25 @@ public class NickNameController : MonoBehaviour
 
                 {
                     string JSONToParse = webRequest.downloadHandler.text;
-                    Debug.Log(processJsonData(JSONToParse));
-                isLogged=processJsonData(JSONToParse);
-                }
+                    isLogged=processJsonData(JSONToParse);
+                    if (isLogged) UnityEngine.SceneManagement.SceneManager.LoadScene("AdventureMode");
+                        else text.text = "Login failed";
             }
+            ;
+        }
         }
 
     private bool processJsonData(string url)
     {
-        JsonData jsonData = JsonUtility.FromJson<JsonData>(url);
-        return jsonData.success;
+        try
+        {
+            JsonData jsonData = JsonUtility.FromJson<JsonData>(url);
+            return jsonData.success;
+        }
+        catch
+        {
+            return false;
+        }
     }
 
     public void openURL()
